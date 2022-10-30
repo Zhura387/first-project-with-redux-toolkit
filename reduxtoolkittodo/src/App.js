@@ -11,7 +11,8 @@ function App() {
   const task = useSelector((state) => state.task.value)
   const [text, setText] = React.useState('');
 
-  const hendleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     dispatch(addTask({ text }))
     setText('')
   }
@@ -22,11 +23,13 @@ function App() {
       </Layout>
       <div>
         <div className='inputPlace'>
+          <form onSubmit={(e)=>handleClick(e)}>
           <input type='text'
             onChange={(e) => setText(e.target.value)}
             placeholder='add text'
             value={text}></input>
-          <Button onClick={() => hendleClick()}>add</Button>
+          <Button onClick={(e) => handleClick(e)}>add</Button>
+          </form>
         </div>
         <div className='TaskPlace'>
 

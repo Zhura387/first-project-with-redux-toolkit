@@ -1,0 +1,42 @@
+$BlueColor: #7dbcea;
+$WhiteColor: #fff;
+
+body {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+#Head {
+  color: $WhiteColor;
+  background: $BlueColor;
+}
+
+.inputPlace {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  button {
+    margin-left: 5px;
+  }
+}
+
+.TaskPlace {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .Task {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+
+    input {
+      margin-left: 5px;
+    }
+  }
+}
